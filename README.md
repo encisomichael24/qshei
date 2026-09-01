@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QSHEI (Queensland Sexual Health & Education Institute)
 
-## Getting Started
+## Description
 
-First, run the development server:
+QSHEI is a modern, inclusive, and sex-positive healthcare and education platform. Led by Nurse Practitioner Linda Kirby, QSHEI provides comprehensive sexual and reproductive healthcare, clinical sexology, and educational workshops. The platform is designed to break down barriers to care, dismantle health stigmas, and equip individuals with the knowledge and support they need in a completely non-judgmental environment.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Architecture
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This project is built on a highly performant and modern tech stack, structured around a variant of Feature-Sliced Design (FSD) to maintain scalability and clear domain boundaries.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Framework: Next.js (App Router)
+- Library: React
+- Language: TypeScript
+- Styling: Tailwind CSS
+- Animation: Framer Motion
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The codebase is organized by business domains:
+- `src/app/`: Handles routing, layouts, metadata, and core entry points.
+- `src/features/`: Contains domain-specific logic and UI components (e.g., home, about, contact) which act as independent modules consumed by the routing layer.
+- `src/components/`: Houses reusable, cross-domain UI elements and layout shells.
 
-## Learn More
+## Security
 
-To learn more about Next.js, take a look at the following resources:
+The application has been hardened against the OWASP Top 10 vulnerabilities. As a statically generated frontend, it inherently mitigates many common web vectors. Furthermore, strict HTTP security headers are enforced at the Next.js server configuration level (`next.config.ts`):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- X-Content-Type-Options: nosniff (Prevents MIME-type sniffing)
+- X-Frame-Options: DENY (Prevents Clickjacking)
+- X-XSS-Protection: 1; mode=block (Legacy XSS mitigation)
+- Referrer-Policy: strict-origin-when-cross-origin
+- Strict-Transport-Security: max-age=31536000; includeSubDomains (Enforces HTTPS)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Design and Aesthetics
 
-## Deploy on Vercel
+The platform follows a "Gold-Standard" design philosophy, prioritizing a minimalist, editorial, and premium user experience.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Typography: Uses a sophisticated pairing of Inter (sans-serif) for clean readability and Playfair Display (serif) for elegant headings.
+- Color Palette: A highly curated, soothing aesthetic avoiding harsh primary colors, utilizing custom tokens like Navy, Sage, Terracotta, and Charcoal.
+- Interaction: Employs Framer Motion for smooth scroll-linked animations, hover transitions, and dynamic loading states to ensure the interface feels responsive and alive.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## SEO and Visibility
+
+The application is heavily optimized for search engine visibility and social sharing:
+- Automated Generation: `sitemap.ts` and `robots.ts` dynamically instruct search engine crawlers on priority index mapping.
+- Metadata: The root layout implements comprehensive OpenGraph (OG) and Twitter Card tags to ensure premium, image-rich link previews when shared across social platforms like Facebook, LinkedIn, Twitter, and iMessage.
+- Performance: Leverages Next.js Image optimization with strict priority loading for above-the-fold content to ensure exceptional Core Web Vitals (LCP, CLS).
+
+## Integrations
+
+- Booking System: External integration with HotDoc for secure, private patient appointment scheduling.
