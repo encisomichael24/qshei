@@ -93,18 +93,19 @@ export function ClinicLocationSection() {
             transition={{ duration: 0.8, delay: 0.15 }}
             className="lg:col-span-6 flex flex-col h-full rounded-2xl lg:rounded-3xl overflow-hidden border border-stone-200/90 shadow-lg bg-white"
           >
-            {/* Map Container - zoomed out to z=14, with footer clutter cleanly cropped */}
-            <div className="relative w-full h-[300px] sm:h-[340px] lg:h-[360px] bg-stone-100 overflow-hidden">
+            {/* Pure Static Map Visual - Non-clickable, just map with pin */}
+            <div className="relative w-full h-[300px] sm:h-[340px] lg:h-[360px] bg-stone-100 overflow-hidden pointer-events-none select-none">
               <iframe
                 title="Queensland Sexual Health & Education Institute Map"
                 src="https://maps.google.com/maps?q=-23.1288306,150.7433833&hl=en&z=14&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                allowFullScreen
+                tabIndex={-1}
+                aria-hidden="true"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-[calc(100%+36px)] -mb-[36px]"
+                className="w-[calc(100%+140px)] h-[calc(100%+160px)] -ml-[70px] -mt-[45px]"
               />
             </div>
 
@@ -119,22 +120,25 @@ export function ClinicLocationSection() {
                 </p>
               </div>
 
-              <div className="pt-2 border-t border-stone-100 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <div className="pt-3 border-t border-stone-100 flex flex-row items-center gap-2 sm:gap-3">
                 <Button
-                  size="md"
+                  size="sm"
                   variant="primary"
-                  className="flex-1 flex items-center justify-center gap-2"
+                  className="flex-1 h-11 px-2.5 sm:px-4 text-xs sm:text-sm font-semibold flex items-center justify-center gap-1 sm:gap-1.5 rounded-xl sm:rounded-2xl"
                   onClick={() => window.open(GOOGLE_MAPS_URL, "_blank", "noopener,noreferrer")}
                 >
-                  Open in Google Maps <ArrowUpRight className="w-4 h-4" />
+                  <span className="sm:hidden">Open Maps</span>
+                  <span className="hidden sm:inline">Open in Google Maps</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
                 </Button>
                 <Button
-                  size="md"
+                  size="sm"
                   variant="outline"
-                  className="flex-1 flex items-center justify-center gap-2"
+                  className="flex-1 h-11 px-2.5 sm:px-4 text-xs sm:text-sm font-semibold flex items-center justify-center gap-1 sm:gap-1.5 rounded-xl sm:rounded-2xl"
                   onClick={() => window.open(HOTDOC_URL, "_blank", "noopener,noreferrer")}
                 >
-                  Book Appointment <ArrowUpRight className="w-4 h-4" />
+                  <span>Book Appointment</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
                 </Button>
               </div>
             </div>

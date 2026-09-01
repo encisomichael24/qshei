@@ -177,15 +177,40 @@ export function About() {
               </p>
             </div>
             <div className="pt-8 flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
-              <Button variant="secondary" size="lg" className="w-full sm:w-auto">Email us</Button>
+              <Button 
+                variant="secondary" 
+                size="lg" 
+                className="w-full sm:w-auto"
+                onClick={() => window.location.href = "mailto:contactus@qshei.com.au"}
+              >
+                Email us
+              </Button>
               <div className="flex items-center justify-center gap-5 text-[var(--color-navy)] w-full sm:w-auto">
-                <a href="#" className="p-2 -ml-2 rounded-full hover:bg-[var(--color-terracotta)]/10 hover:text-[var(--color-terracotta)] transition-colors duration-300" aria-label="Instagram">
+                <a 
+                  href="https://www.instagram.com/the_healthy_sex_np/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="p-2 -ml-2 rounded-full hover:bg-[var(--color-terracotta)]/10 hover:text-[var(--color-terracotta)] transition-colors duration-300" 
+                  aria-label="Instagram"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </a>
-                <a href="#" className="p-2 rounded-full hover:bg-[var(--color-terracotta)]/10 hover:text-[var(--color-terracotta)] transition-colors duration-300" aria-label="Facebook">
+                <a 
+                  href="https://www.facebook.com/QHSEI.AU" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="p-2 rounded-full hover:bg-[var(--color-terracotta)]/10 hover:text-[var(--color-terracotta)] transition-colors duration-300" 
+                  aria-label="Facebook"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3.81l.53-4H14V7a1 1 0 0 1 1-1h3z"/></svg>
                 </a>
-                <a href="#" className="p-2 rounded-full hover:bg-[var(--color-terracotta)]/10 hover:text-[var(--color-terracotta)] transition-colors duration-300" aria-label="LinkedIn">
+                <a 
+                  href="https://www.linkedin.com/in/linda-kirby-65402a125/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="p-2 rounded-full hover:bg-[var(--color-terracotta)]/10 hover:text-[var(--color-terracotta)] transition-colors duration-300" 
+                  aria-label="LinkedIn"
+                >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                 </a>
               </div>
