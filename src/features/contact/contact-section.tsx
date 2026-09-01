@@ -102,6 +102,7 @@ export function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="space-y-6"
           >
             <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6">
               Get in Touch
@@ -109,9 +110,53 @@ export function ContactSection() {
             <p className="text-white/80 text-lg leading-relaxed">
               Whether you need to schedule a clinical appointment, have a confidential question about our services, or are looking to book an educational workshop, we are here to help.
             </p>
-            <p className="text-white/80 text-lg leading-relaxed mt-4">
+            <p className="text-white/80 text-lg leading-relaxed">
               Reaching out about sexual and reproductive health can feel like a big step, but QSHEI provides a safe, compassionate, and strictly confidential environment from your very first message.
             </p>
+
+            {/* Direct Contact Pills */}
+            <div className="pt-6 space-y-3 max-w-lg">
+              {/* Phone Capsule */}
+              <motion.a
+                href="tel:0468129226"
+                whileHover={{ y: -2, scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
+                className="group flex items-center justify-between px-6 py-4 rounded-full bg-[var(--color-sage)] text-[var(--color-navy)] shadow-md hover:shadow-xl hover:bg-white transition-all duration-300"
+              >
+                <span className="font-serif text-lg sm:text-xl font-medium tracking-wide">Phone</span>
+                <span className="text-sm sm:text-base font-semibold text-[var(--color-navy)] group-hover:text-[var(--color-terracotta)] transition-colors">
+                  0468 129 226
+                </span>
+              </motion.a>
+
+              {/* Email Capsule */}
+              <motion.a
+                href="mailto:contactus@qshei.com.au"
+                whileHover={{ y: -2, scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
+                className="group flex items-center justify-between px-6 py-4 rounded-full bg-[var(--color-sage)] text-[var(--color-navy)] shadow-md hover:shadow-xl hover:bg-white transition-all duration-300"
+              >
+                <span className="font-serif text-lg sm:text-xl font-medium tracking-wide">Email</span>
+                <span className="text-xs sm:text-sm font-semibold text-[var(--color-navy)] group-hover:text-[var(--color-terracotta)] transition-colors truncate pl-3">
+                  contactus@qshei.com.au
+                </span>
+              </motion.a>
+
+              {/* Social Capsule */}
+              <motion.a
+                href="https://instagram.com/qshei.au"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -2, scale: 1.01 }}
+                whileTap={{ scale: 0.99 }}
+                className="group flex items-center justify-between px-6 py-4 rounded-full bg-[var(--color-sage)] text-[var(--color-navy)] shadow-md hover:shadow-xl hover:bg-white transition-all duration-300"
+              >
+                <span className="font-serif text-lg sm:text-xl font-medium tracking-wide">Social</span>
+                <span className="text-sm sm:text-base font-semibold text-[var(--color-navy)] group-hover:text-[var(--color-terracotta)] transition-colors">
+                  @qshei.au
+                </span>
+              </motion.a>
+            </div>
           </motion.div>
         </div>
 
