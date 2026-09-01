@@ -9,8 +9,9 @@ export function proxy(request: NextRequest) {
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline';
     style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data: https://images.unsplash.com https://images.pexels.com;
+    img-src 'self' blob: data: https://images.unsplash.com https://images.pexels.com https://*.googleapis.com https://*.gstatic.com;
     font-src 'self' data:;
+    frame-src 'self' https://www.google.com https://maps.google.com;
     object-src 'none';
     base-uri 'self';
     form-action 'self';
