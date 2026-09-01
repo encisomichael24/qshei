@@ -62,7 +62,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="py-24 px-6 lg:px-12 bg-[#F9F9F7]">
+    <section id="services" className="py-24 px-6 lg:px-12 bg-[#F9F9F7] scroll-mt-20">
       <div className="max-w-[1440px] mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
