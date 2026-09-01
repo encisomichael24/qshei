@@ -1,10 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
+  const router = useRouter();
   return (
     <section className="relative overflow-hidden pt-32 pb-20 lg:pt-32 lg:pb-24 xl:pb-32 px-6 lg:px-12 bg-[var(--color-sage)]/30">
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-8 items-center">
@@ -38,7 +40,7 @@ export function Hero() {
             <Button size="lg" variant="primary" className="w-full sm:w-auto" onClick={() => window.open("https://www.hotdoc.com.au/medical-centres/yeppoon-QLD-4703/queensland-sexual-health-education-institute/doctors", "_blank")}>
               Book an Appointment
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto" onClick={() => router.push("/about")}>
               Learn More
             </Button>
           </motion.div>
