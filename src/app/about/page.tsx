@@ -2,7 +2,7 @@ import { About } from "@/features/about/about";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | QSHEI",
+  title: "About Us",
   description: "Learn about the Queensland Sexual Health & Education Institute, our clinical practice, and our educational initiatives.",
 };
 

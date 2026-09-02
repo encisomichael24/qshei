@@ -88,7 +88,7 @@ export function Hero() {
             <Button 
               size="lg" 
               variant="outline" 
-              className="w-full sm:w-auto bg-white/60 hover:bg-white backdrop-blur-sm" 
+              className="w-full sm:w-auto bg-white/80 hover:bg-[var(--color-navy)] hover:text-white backdrop-blur-sm" 
               onClick={() => router.push("/about")}
             >
               Learn More
