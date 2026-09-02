@@ -3,7 +3,7 @@ import { ClinicLocationSection } from "@/features/contact/clinic-location-sectio
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us & Location | QSHEI",
+  title: "Contact Us & Location",
   description: "Get in touch with the Queensland Sexual Health & Education Institute. Visit QSHEI in Yeppoon or reach out online.",
 };
 

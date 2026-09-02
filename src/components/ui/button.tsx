@@ -11,7 +11,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 const buttonVariants = {
-  primary: "bg-[var(--color-terracotta)] text-white hover:bg-[var(--color-terracotta-hover)] shadow-[0_8px_30px_rgb(201,122,99,0.3)]",
+  primary: "bg-[#9A4A33] text-white hover:bg-[#823A25] shadow-[0_8px_30px_rgb(201,122,99,0.3)]",
   secondary: "bg-[var(--color-navy)] text-white hover:bg-[#253245] shadow-[0_8px_30px_rgb(26,36,51,0.2)]",
   outline: "border-2 border-[var(--color-navy)] text-[var(--color-navy)] hover:bg-[var(--color-navy)] hover:text-white",
   ghost: "hover:bg-[var(--color-sage)] text-[var(--color-navy)]",
