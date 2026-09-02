@@ -3,6 +3,8 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -18,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://qshei.com.au"),
   title: {
     default: "QSHEI | Inclusive Sexual Health & Education",
-    template: "%s | QSHEI",
+    template: "QSHEI | %s",
   },
   description: "Queensland Sexual Health & Education Institute providing inclusive, evidence-based healthcare and education.",
   keywords: ["sexual health", "education", "inclusive healthcare", "QSHEI", "Queensland"],
@@ -45,9 +47,34 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalClinic",
+              "name": "Queensland Sexual Health & Education Institute (QSHEI)",
+              "url": "https://qshei.com.au",
+              "telephone": "+61468129226",
+              "email": "contactus@qshei.com.au",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Yeppoon",
+                "addressRegion": "QLD",
+                "addressCountry": "AU"
+              },
+              "sameAs": [
+                "https://instagram.com/qshei.au"
+              ],
+              "description": "Inclusive, Sex-Positive Healthcare & Education for Everyone.",
+            })
+          }}
+        />
         <Header />
         <main className="flex-1 flex flex-col">{children}</main>
         <Footer />
+        <ScrollToTop />
+        <Analytics />
       </body>
     </html>
   );

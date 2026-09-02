@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, ChevronRight, ChevronLeft } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { LegalModals } from "@/components/legal/legal-modals";
 
 const contactSchema = z.object({
   reasonForInquiry: z.array(z.string()).min(1, "Please select at least one reason."),
@@ -201,7 +202,7 @@ export function ContactSection() {
                       />
                     ))}
                   </div>
-                  <span className="text-sm font-medium text-gray-400">Step {step} of 3</span>
+                  <span className="text-sm font-medium text-gray-600">Step {step} of 3</span>
                 </div>
 
                 <form onSubmit={handleSubmit(onSubmit)} className="flex-1 flex flex-col relative">
@@ -369,6 +370,12 @@ export function ContactSection() {
                       </Button>
                     )}
                   </div>
+                  
+                  {step === 3 && (
+                    <div className="mt-6 text-center text-xs text-stone-500">
+                      By submitting this inquiry, you confirm this is not an emergency and agree to QSHEI&apos;s <LegalModals className="inline" isFooter={false} />.
+                    </div>
+                  )}
                 </form>
               </>
             )}

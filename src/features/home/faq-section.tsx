@@ -51,7 +51,7 @@ function FAQItem({ question, answer, isOpen, onClick }: { question: string, answ
         onClick={onClick}
         className="w-full flex items-center justify-between p-6 md:p-8 text-left transition-colors hover:bg-[var(--color-sage)]/20"
       >
-        <h4 className="font-serif text-lg md:text-xl font-semibold text-[var(--color-navy)] pr-8">{question}</h4>
+        <h3 className="font-serif text-lg md:text-xl font-semibold text-[var(--color-navy)] pr-8">{question}</h3>
         <ChevronDown className={cn("w-6 h-6 text-[var(--color-terracotta)] transition-transform duration-300 flex-shrink-0", isOpen && "rotate-180")} />
       </button>
       <AnimatePresence>

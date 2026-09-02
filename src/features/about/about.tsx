@@ -161,7 +161,7 @@ export function About() {
             className="lg:col-span-7 space-y-6"
           >
             <h2 className="font-serif text-4xl lg:text-5xl font-bold text-[var(--color-navy)]">About Linda</h2>
-            <h4 className="text-lg lg:text-xl font-medium text-[var(--color-terracotta)]">Linda Kirby (she/her)</h4>
+            <h3 className="text-lg lg:text-xl font-medium text-[var(--color-terracotta)]">Linda Kirby (she/her)</h3>
             <div className="space-y-4 text-[var(--color-charcoal)] leading-relaxed">
               <p>
                 Linda Kirby is an AHPRA-registered Nurse Practitioner and Clinical Sexologist with extensive specialist knowledge in emergency medicine, forensic medicine, and sexual and reproductive health, with a particular focus on holistic and women&apos;s health.
